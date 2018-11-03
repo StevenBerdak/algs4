@@ -39,5 +39,25 @@ class TestCh1Exercises {
         }
     }
 
+    @Test
+    void oneOneFour() {
+        //'then' is not Java syntax.
+        //a > b should be contained in brackets
+        //statement is fine
+        //c = 0 requires a line termination char
+    }
 
+    @Test
+    void oneOneFive() {
+        assertTrue(pairStrictlyWithinBounds(0.1, 0.9, 0.0, 1.0));
+        assertFalse(pairStrictlyWithinBounds(0.0, 1.0, 0.0, 1.0));
+    }
+
+    boolean pairStrictlyWithinBounds(double x, double y, double lo, double hi) {
+        if (x > lo && x < hi && y > lo && y < hi) {
+            return true;
+        }
+
+        return false;
+    }
 }

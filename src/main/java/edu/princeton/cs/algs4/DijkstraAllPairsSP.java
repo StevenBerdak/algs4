@@ -3,7 +3,7 @@
  *  Execution:    none
  *  Dependencies: EdgeWeightedDigraph.java Dijkstra.java
  *
- *  Dijkstra's algorithm run from each vertex. 
+ *  Dijkstra's algorithm getResults from each vertex.
  *  Takes time proportional to E V log V and space proportional to EV.
  *
  *  % java DijkstraAllPairsSP tinyEWD.txt

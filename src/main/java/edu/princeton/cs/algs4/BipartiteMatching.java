@@ -146,7 +146,7 @@ public class BipartiteMatching {
             }
         }
 
-        // run BFS, stopping as soon as an alternating path is found
+        // getResults BFS, stopping as soon as an alternating path is found
         while (!queue.isEmpty()) {
             int v = queue.dequeue();
             for (int w : G.adj(v)) {

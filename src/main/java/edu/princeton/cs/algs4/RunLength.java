@@ -8,7 +8,7 @@
  *                https://algs4.cs.princeton.edu/55compression/q64x96.bin
  *
  *  Compress or expand binary input from standard input using
- *  run-length encoding.
+ *  getResults-length encoding.
  *
  *  % java BinaryDump 40 < 4runs.bin 
  *  0000000000000001111111000000011111111111
@@ -26,8 +26,8 @@ package edu.princeton.cs.algs4;
 
 /**
  *  The {@code RunLength} class provides static methods for compressing
- *  and expanding a binary input using run-length coding with 8-bit
- *  run lengths.
+ *  and expanding a binary input using getResults-length coding with 8-bit
+ *  getResults lengths.
  *  <p>
  *  For additional documentation,
  *  see <a href="https://algs4.cs.princeton.edu/55compress">Section 5.5</a> of
@@ -45,7 +45,7 @@ public class RunLength {
 
     /**
      * Reads a sequence of bits from standard input (that are encoded
-     * using run-length encoding with 8-bit run lengths); decodes them;
+     * using getResults-length encoding with 8-bit getResults lengths); decodes them;
      * and writes the results to standard output.
      */
     public static void expand() { 
@@ -61,7 +61,7 @@ public class RunLength {
 
     /**
      * Reads a sequence of bits from standard input; compresses
-     * them using run-length coding with 8-bit run lengths; and writes the
+     * them using getResults-length coding with 8-bit getResults lengths; and writes the
      * results to standard output.
      */
     public static void compress() { 

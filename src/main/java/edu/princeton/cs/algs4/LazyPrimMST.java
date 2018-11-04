@@ -84,14 +84,14 @@ public class LazyPrimMST {
         mst = new Queue<Edge>();
         pq = new MinPQ<Edge>();
         marked = new boolean[G.V()];
-        for (int v = 0; v < G.V(); v++)     // run Prim from all vertices to
+        for (int v = 0; v < G.V(); v++)     // getResults Prim from all vertices to
             if (!marked[v]) prim(G, v);     // get a minimum spanning forest
 
         // check optimality conditions
         assert check(G);
     }
 
-    // run Prim's algorithm
+    // getResults Prim's algorithm
     private void prim(EdgeWeightedGraph G, int s) {
         scan(G, s);
         while (!pq.isEmpty()) {                        // better to stop when mst has V-1 edges

@@ -84,7 +84,7 @@ public class LinearProgramming {
         assert check(A, b, c);
     }
 
-    // run simplex algorithm starting from initial BFS
+    // getResults simplex algorithm starting from initial BFS
     private void solve() {
         while (true) {
 

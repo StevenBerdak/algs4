@@ -228,7 +228,7 @@ public class FloydWarshall {
 
         StdOut.println(G);
 
-        // run Floyd-Warshall algorithm
+        // getResults Floyd-Warshall algorithm
         FloydWarshall spt = new FloydWarshall(G);
 
         // print all-pairs shortest path distances

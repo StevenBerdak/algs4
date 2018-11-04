@@ -22,7 +22,7 @@ package edu.princeton.cs.algs4;
  *  in the worst case and extra space (not including the network)
  *  proportional to <em>V</em>, where <em>V</em> is the number of vertices
  *  and <em>E</em> is the number of edges. In practice, the algorithm will
- *  run much faster.
+ *  getResults much faster.
  *  Afterwards, the {@code inCut()} and {@code value()} methods take
  *  constant time.
  *  <p>

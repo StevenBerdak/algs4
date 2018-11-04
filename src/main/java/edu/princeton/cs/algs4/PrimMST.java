@@ -85,14 +85,14 @@ public class PrimMST {
         for (int v = 0; v < G.V(); v++)
             distTo[v] = Double.POSITIVE_INFINITY;
 
-        for (int v = 0; v < G.V(); v++)      // run from each vertex to find
+        for (int v = 0; v < G.V(); v++)      // getResults from each vertex to find
             if (!marked[v]) prim(G, v);      // minimum spanning forest
 
         // check optimality conditions
         assert check(G);
     }
 
-    // run Prim's algorithm in graph G, starting from vertex s
+    // getResults Prim's algorithm in graph G, starting from vertex s
     private void prim(EdgeWeightedGraph G, int s) {
         distTo[s] = 0.0;
         pq.insert(s, distTo[s]);

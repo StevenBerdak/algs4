@@ -80,7 +80,7 @@ public class KruskalMST {
             pq.insert(e);
         }
 
-        // run greedy algorithm
+        // getResults greedy algorithm
         UF uf = new UF(G.V());
         while (!pq.isEmpty() && mst.size() < G.V() - 1) {
             Edge e = pq.delMin();

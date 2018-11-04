@@ -108,7 +108,7 @@ public class KosarajuSharirSCC {
         // compute reverse postorder of reverse graph
         DepthFirstOrder dfs = new DepthFirstOrder(G.reverse());
 
-        // run DFS on G, using reverse postorder to guide calculation
+        // getResults DFS on G, using reverse postorder to guide calculation
         marked = new boolean[G.V()];
         id = new int[G.V()];
         for (int v : dfs.reversePost()) {

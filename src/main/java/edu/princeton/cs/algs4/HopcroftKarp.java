@@ -194,7 +194,7 @@ public class HopcroftKarp {
             }
         }
 
-        // run BFS until an augmenting path is found
+        // getResults BFS until an augmenting path is found
         // (and keep going until all vertices at that distance are explored)
         boolean hasAugmentingPath = false;
         while (!queue.isEmpty()) {

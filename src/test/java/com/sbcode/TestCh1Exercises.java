@@ -19,15 +19,15 @@ public class TestCh1Exercises {
 
     @Test
     public void oneOneOne() {
-        assertEquals((0 + 15) / 2, 7);
-        assertEquals(2.0e-6 * 100000000.1, 200.0000002);
+        assertEquals(7, (0 + 15) / 2);
+        assertEquals(200.0000002, 2.0e-6 * 100000000.1);
         assertTrue(true && false || true && true);
     }
 
     @Test
     public void oneOneTwo() {
-        assertEquals((1 + 2.236) / 2, 1.618);
-        assertEquals(1 + 2 + 3 + 4.0, 10.0);
+        assertEquals(1.618, (1 + 2.236) / 2);
+        assertEquals(10.0, 1 + 2 + 3 + 4.0);
         Assertions.assertTrue(4.1 >= 4);
 
         // 1 + 2 + "3" = "not a statement"
@@ -87,7 +87,7 @@ public class TestCh1Exercises {
         while (Math.abs(t - 9.0 / t) > 0.001) {
             t = (9.0 / t + t) / 2.0;
         }
-        assertEquals(String.format("%.5f", t), "3.00009");
+        assertEquals("3.00009", String.format("%.5f", t));
 
         int sum = 0;
         for (int i = 1; i < 1000; i++) {
@@ -95,7 +95,7 @@ public class TestCh1Exercises {
                 sum++;
             }
         }
-        assertEquals(sum, 499500);
+        assertEquals(499500, sum);
 
         sum = 0;
         for (int i = 1; i < 1000; i *= 2) {
@@ -104,20 +104,20 @@ public class TestCh1Exercises {
             }
         }
 
-        assertEquals(sum, 10000);
+        assertEquals(10000, sum);
     }
 
     @Test
     public void oneOneEight() {
         assertEquals('b', 'b');
-        assertEquals('b' + 'c', 197);
-        assertEquals((char) ('a' + 4), 'e');
+        assertEquals(197, 'b' + 'c');
+        assertEquals('e', (char) ('a' + 4));
     }
 
     @Test
     public void oneOneNine() {
-        assertEquals(intToBinaryString(21), "10101");
-        assertEquals(intToBinaryString(7), "111");
+        assertEquals("10101", intToBinaryString(21));
+        assertEquals("111", intToBinaryString(7));
     }
 
     String intToBinaryString(int n) {
@@ -144,13 +144,13 @@ public class TestCh1Exercises {
 
     @Test
     public void oneOneEleven() {
-        assertEquals(string2DBooleanArray(new boolean[][]
+        assertEquals("[*][ ][*]\n[ ][*][ ]\n[*][ ][*]\n",
+                string2DBooleanArray(new boolean[][]
                         {
                                 {true, false, true},
                                 {false, true, false},
                                 {true, false, true}
-                        }),
-                "[*][ ][*]\n[ ][*][ ]\n[*][ ][*]\n");
+                        }));
     }
 
     String string2DBooleanArray(boolean[][] array) {
@@ -172,8 +172,8 @@ public class TestCh1Exercises {
 
     @Test
     public void oneOneTwelve() {
-        assertEquals(Arrays.toString(provideOneOneTwelveArray()),
-                Arrays.toString(new int[]{0, 1, 2, 3, 4, 4, 3, 2, 1, 0}));
+        assertEquals(Arrays.toString(new int[]{0, 1, 2, 3, 4, 4, 3, 2, 1, 0}),
+                Arrays.toString(provideOneOneTwelveArray()));
     }
 
     int[] provideOneOneTwelveArray() {
@@ -203,7 +203,7 @@ public class TestCh1Exercises {
                 {4, 8, 12}
         };
 
-        assertEquals(Arrays.deepToString(transpositionOfAMatrix(testMatrix)), Arrays.deepToString(testTransposition));
+        assertEquals(Arrays.deepToString(testTransposition), Arrays.deepToString(transpositionOfAMatrix(testMatrix)));
     }
 
     int[][] transpositionOfAMatrix(int[][] matrix) {
@@ -220,10 +220,10 @@ public class TestCh1Exercises {
 
     @Test
     public void oneOneFourteen() {
-        assertEquals(lg(2), 1);
-        assertEquals(lg(4), 2);
-        assertEquals(lg(16), 4);
-        assertEquals(lg(20), 4);
+        assertEquals(1, lg(2));
+        assertEquals(2, lg(4));
+        assertEquals(4, lg(16));
+        assertEquals(4, lg(20));
     }
 
     static int lg(int n) {
@@ -266,7 +266,7 @@ public class TestCh1Exercises {
 
     @Test
     public void oneOneSixteen() {
-        assertEquals(exR1(6), "311361142246");
+        assertEquals("311361142246", exR1(6));
     }
 
     public static String exR1(int n) {
@@ -287,11 +287,11 @@ public class TestCh1Exercises {
 
     @Test
     public void oneOneEighteen() {
-        assertEquals(mystery(2, 25), 50);
-        assertEquals(mystery(3, 11), 33);
+        assertEquals(50, mystery(2, 25));
+        assertEquals(33, mystery(3, 11));
         // The mystery method returns b multiplied by a.
-        assertEquals(mystery2(2, 25), 33554432);
-        assertEquals(mystery2(3, 11), 177147);
+        assertEquals(33554432, mystery2(2, 25));
+        assertEquals(177147, mystery2(3, 11));
         // The mystery2 method returns a to the power of b.
     }
 
@@ -319,22 +319,22 @@ public class TestCh1Exercises {
         // Iteration 57 is the last iteration on my machine that will most likely complete in less than 1 hour.
 
         long fibResultI9 = fibonacci(9);
-        assertEquals(fibResultI9, 34);
+        assertEquals(34, fibResultI9);
 
         long improvedFibResultI0 = fibonacciImproved(0);
-        assertEquals(improvedFibResultI0, 0);
+        assertEquals(0, improvedFibResultI0);
 
         long improvedFibResultI1 = fibonacciImproved(1);
-        assertEquals(improvedFibResultI1, 1);
+        assertEquals(1, improvedFibResultI1);
 
         long improvedFibResultI2 = fibonacciImproved(2);
-        assertEquals(improvedFibResultI2, 1);
+        assertEquals(1, improvedFibResultI2);
 
         long improvedFibResultI9 = fibonacciImproved(9);
-        assertEquals(improvedFibResultI9, 34);
+        assertEquals(34, improvedFibResultI9);
 
         long improvedFibResultI90 = fibonacciImproved(90);
-        assertEquals(improvedFibResultI90, 2880067194370816120L);
+        assertEquals(2880067194370816120L, improvedFibResultI90);
     }
 
     public static long fibonacci(int n) {
@@ -364,10 +364,10 @@ public class TestCh1Exercises {
     @Test
     public void oneOneTwenty() {
         int factorialOfOne = ln(1);
-        assertEquals(factorialOfOne, 1);
+        assertEquals(1, factorialOfOne);
 
         int factorialOfFive = ln(5);
-        assertEquals(factorialOfFive, 120);
+        assertEquals(120, factorialOfFive);
     }
 
     static int ln(int factorial) {
@@ -441,5 +441,155 @@ public class TestCh1Exercises {
 
     double divideBOverA(double a, double b) {
         return b / a;
+    }
+
+    @Test
+    public void oneOneTwentyTwo() {
+        int[] testArray = new int[]{0, 2, 4, 5, 7, 9, 10, 16, 25, 29, 50, 400, 557, 678};
+
+        int index = indexOf(testArray, 25);
+        assertEquals(8, index);
+
+        index = indexOf(testArray, 55);
+
+        assertEquals(-1, index);
+
+        index = indexOf(testArray, -25);
+
+        assertEquals(-1, index);
+
+        index = indexOf(testArray, 1001);
+
+        assertEquals(-1, index);
+    }
+
+    static int indexOf(int[] a, int key) {
+        return indexOf(a, key, 0, a.length - 1, 0);
+    }
+
+    static int indexOf(int[] a, int key, int lo, int hi, int depth) {
+        String indentation = "";
+
+        for (int i = 0; i < depth; ++i) {
+            indentation += "-";
+        }
+
+        StdOut.println(String.format("%sLo, hi : %s, %s", indentation, lo, hi));
+
+        depth++;
+
+        if (lo > hi) return -1;
+
+        int mid = lo + (hi - lo) / 2;
+
+        if (key < a[mid]) {
+            return indexOf(a, key, lo, mid - 1, depth);
+        } else if (key > a[mid]) {
+            return indexOf(a, key, mid + 1, hi, depth);
+        } else {
+            return mid;
+        }
+    }
+
+    @Test
+    public void oneOneTwentyThree() {
+        String inputString = "+";
+        Scanner scanner = new Scanner(inputString);
+        String input = scanner.nextLine();
+
+        int[] testArray = new int[]{0, 2, 4, 5, 7, 10, 16, 25, 29, 50, 400, 557, 678};
+
+        int[] testValues = new int[]{2, 3, 5, 7, 9, 25, 50, 55, 400};
+
+        int[] result = binarySearchHistory(testArray, testValues, inputString);
+
+        System.out.println("Numbers not whitelisted = " + Arrays.toString(result));
+
+        //Check not whitelisted values results
+        assertTrue(Arrays.equals(result, new int[]{3, 9, 55}));
+
+        scanner.close();
+
+        String nextInputString = "-";
+
+        scanner = new Scanner(nextInputString);
+        input = scanner.nextLine();
+
+        result = binarySearchHistory(testArray, testValues, input);
+
+        System.out.println("Numbers whitelisted = " + Arrays.toString(result));
+
+        //Check whitelisted values results
+        assertTrue(Arrays.equals(result, new int[]{2, 5, 7, 25, 50, 400}));
+    }
+
+    /**
+     * Method peroforms binary search on an array and tracks the values that were contained in the input array or the
+     * values that were not contained in the input array depending on the supplied argument.
+     *
+     * @param a       The array to perform binary search on.
+     * @param listArg The argument to determine to return the numbers that were contained or that were not. Valid values
+     *                are "+" or "-"
+     * @return The specified set of numbers.
+     */
+    int[] binarySearchHistory(int[] a, int[] values, String listArg) {
+        if (!listArg.equals("+") && !listArg.equals("-")) {
+            throw new InvalidParameterException("The list argument is invalid (must be '+' or '-')");
+        }
+
+        int[] containsList = new int[0];
+        int[] notContainsList = new int[0];
+
+        for (int i = 0; i < values.length; i++) {
+            int index = indexOf(a, values[i]);
+
+            if (index == -1) {
+                notContainsList = Arrays.copyOf(notContainsList, notContainsList.length + 1);
+                notContainsList[notContainsList.length - 1] = values[i];
+            } else {
+                containsList = Arrays.copyOf(containsList, containsList.length + 1);
+                containsList[containsList.length - 1] = values[i];
+            }
+        }
+
+        if (listArg == "+") {
+            return notContainsList;
+        } else {
+            return containsList;
+        }
+    }
+
+    @Test
+    public void oneOneTwentyFour() {
+        String input = "1111111";
+        System.out.print("Find the greatest common divisor, enter first number: ");
+        Scanner scanner = new Scanner(input);
+        System.out.println(input);
+        int numA = Integer.valueOf(scanner.nextLine());
+        System.out.print("Enter second number: ");
+        input = "1234567";
+        scanner = new Scanner(input);
+        int numB = Integer.valueOf(scanner.nextLine());
+        System.out.println(input);
+
+        int result = euclidGcd(numA, numB);
+
+        System.out.println("The result is: " + result);
+
+        assertEquals(1, result);
+
+        assertEquals(14, euclidGcd(28, 42));
+
+        assertEquals(28, euclidGcd(0, 28));
+
+        assertEquals(7, euclidGcd(28, 49));
+
+//        assertEquals(euclidGcd(28, 0), 0);
+    }
+
+    static int euclidGcd(int a, int b) {
+        if (b == 0) return a;
+        int c = a % b;
+        return euclidGcd(b, c);
     }
 }
